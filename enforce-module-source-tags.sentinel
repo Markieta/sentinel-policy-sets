@@ -1,0 +1,7 @@
+import "tfconfig"
+
+main = rule {
+  for tfconfig.modules as module {
+    module.source contains "ref="
+  }
+}
