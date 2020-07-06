@@ -1,7 +1,7 @@
 import "tfconfig"
 
 using_tags = func() {
-  for tfconfig.modules as module {
+  for tfconfig.modules as name, module {
     if module.source not contains "ref=" {
       return false
     }
