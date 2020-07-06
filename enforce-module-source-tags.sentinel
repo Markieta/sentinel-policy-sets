@@ -3,6 +3,7 @@ import "tfconfig"
 using_tags = func() {
   for tfconfig.modules as name, module {
     if module.source not contains "ref=" {
+      print("Please reference a specific tag version for the following module source:", module.source)
       return false
     }
   }
